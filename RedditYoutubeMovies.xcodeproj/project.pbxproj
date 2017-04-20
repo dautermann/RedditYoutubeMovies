@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CE43D89E6EC53B0F2198165 /* Pods_RedditYoutubeMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECC69145DFCA1A43F204876 /* Pods_RedditYoutubeMovies.framework */; };
+		2560750F1EA7D1ED0093CA69 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2560750E1EA7D1ED0093CA69 /* libxml2.tbd */; };
 		ACE2D7711D6F683800103D69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2D7701D6F683800103D69 /* main.m */; };
 		ACE2D7741D6F683800103D69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2D7731D6F683800103D69 /* AppDelegate.m */; };
 		ACE2D7771D6F683800103D69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2D7761D6F683800103D69 /* ViewController.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2560750E1EA7D1ED0093CA69 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		8ECC69145DFCA1A43F204876 /* Pods_RedditYoutubeMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditYoutubeMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE2D76C1D6F683800103D69 /* RedditYoutubeMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditYoutubeMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE2D7701D6F683800103D69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2560750F1EA7D1ED0093CA69 /* libxml2.tbd in Frameworks */,
 				1CE43D89E6EC53B0F2198165 /* Pods_RedditYoutubeMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +203,7 @@
 		EAAEBA2A4A6EE8EE35EFA8F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2560750E1EA7D1ED0093CA69 /* libxml2.tbd */,
 				8ECC69145DFCA1A43F204876 /* Pods_RedditYoutubeMovies.framework */,
 			);
 			name = Frameworks;
@@ -376,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -537,7 +541,7 @@
 			baseConfigurationReference = FFC3BF1FDB89B12F1E3DB72D /* Pods-RedditYoutubeMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				INFOPLIST_FILE = RedditYoutubeMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.RedditYoutubeMovies;
@@ -550,7 +554,7 @@
 			baseConfigurationReference = FD0F3DEEF649BCB1CE6AB0D4 /* Pods-RedditYoutubeMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				INFOPLIST_FILE = RedditYoutubeMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.RedditYoutubeMovies;
